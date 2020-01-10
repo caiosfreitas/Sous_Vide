@@ -3,7 +3,6 @@
  
 #include <OneWire.h>
 #include <DallasTemperature.h>
-#include <LiquidCrystal.h>
  
 // Porta do pino de sinal do DS18B20
 #define ONE_WIRE_BUS 3
@@ -93,22 +92,6 @@ else
   Serial.print("Temp Ideal: ");
   Serial.print(TempI);
    
-  // Mostra dados no LCD  
-  lcd.clear();
-  lcd.setCursor(0,0);
-  lcd.print("Temp.:       ");
-  //Simbolo grau
-  lcd.write(223);
-  lcd.print("C");
-  lcd.setCursor(7,0);
-  lcd.print(tempC);
-  lcd.setCursor(0,1);
-  lcd.print("L: ");
-  lcd.setCursor(3,1);
-  lcd.print(tempMin,1);
-  lcd.setCursor(8,1);
-  lcd.print("H: ");
-  lcd.setCursor(11,1);
-  lcd.print(tempMax,1);
+  
   delay(3000);
 }
